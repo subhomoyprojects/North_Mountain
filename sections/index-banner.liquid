@@ -1,45 +1,75 @@
 <div class="banner-box">
-    <div class="banner-item">
-        <div class="banner-image">
-            
-        </div>
+  {% if section.settings.display_type == 'single' %}
+    {%- for block in section.blocks limit: 1 -%}
+      <div class="banner-item">
+        <div class="banner-image" style="background-image: url({{ block.settings.banner-image | image_url }})"></div>
         <div class="banner-content">
-            <div class="banner-content-left"></div>
-            <div class="banner-content-right"></div>
+          <div class="banner-content-left">
+            <h2>{{ block.settings.title }}</h2>
+            <p>{{ block.settings['banner-description'] }}</p>
+          </div>
         </div>
-    </div>
+      </div>
+    {%- endfor -%}
+  {% else %}
+    {%- for block in section.blocks -%}
+      <div class="banner-item">
+        <div class="banner-image" style="background-image: url({{ block.settings.banner-image | image_url }})"></div>
+        <div class="banner-content">
+          <div class="banner-content-left">
+            <h2>{{ block.settings.title }}</h2>
+            <p>{{ block.settings['banner-description'] }}</p>
+          </div>
+        </div>
+      </div>
+    {%- endfor -%}
+  {% endif %}
 </div>
 
-
 {% schema %}
-  {
-    "name": "Index-banner",
-    "tag": "section",
-    "class": "index-banner-wrapper",
-    "settings": [
-    ],
-    "blocks": [
-      {
-        "name": "indexBannerItems",
-        "type": "indexBannerItems",
-        "settings": [
-           {
-             "type": "image_picker",
-             "id": "banner-image",
-             "label": "Banner Image"
-           },
-           {
-             "type": "richtext",
-             "id": "title",
-             "label": "Banner Title"
-           },
-        ]
-      }
-    ],
-    "presets": [
-      {
-        "name": "Index-banner",
-      }
-    ]
-  }
+{
+  "name": "Index-banner",
+  "tag": "section",
+  "class": "index-banner-wrapper",
+  "settings": [
+    {
+      "type": "select",
+      "id": "display_type",
+      "label": "Banner Display Type",
+      "options": [
+        { "value": "single", "label": "Single Banner" },
+        { "value": "carousel", "label": "Carousel" }
+      ],
+      "default": "single"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "indexBannerItems",
+      "type": "indexBannerItems",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "banner-image",
+          "label": "Banner Image"
+        },
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "Banner Title"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "banner-description",
+          "label": "Banner Description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Index-banner"
+    }
+  ]
+}
 {% endschema %}
