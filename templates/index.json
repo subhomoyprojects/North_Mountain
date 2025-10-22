@@ -58,7 +58,8 @@
       "name": "Product Card Section",
       "settings": {
         "title": "Testing",
-        "subHeading": "Sub heading"
+        "subHeading": "Sub heading",
+        "alignment": "right"
       }
     }
   },
