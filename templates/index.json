@@ -44,7 +44,7 @@
       ],
       "name": "Index-banner",
       "settings": {
-        "display_type": "single"
+        "display_type": "carousel"
       }
     },
     "featured_collection": {
