@@ -17,7 +17,9 @@
           "settings": {
             "banner_image": "shopify://shop_images/Mask_group.png",
             "title": "<h5>Welcome To Snappy Tack</h5><h2>Lorem ipsum dolor sit amet</h2>",
-            "banner_description": "Professionalize Your Online Store with High-Quality, No-Cost Images."
+            "banner_description": "Professionalize Your Online Store with High-Quality, No-Cost Images.",
+            "banner_url": "#",
+            "banner_text": "Shop Now"
           }
         },
         "index_banner_items_TtxmdV": {
@@ -25,7 +27,9 @@
           "settings": {
             "banner_image": "shopify://shop_images/Mask_group.png",
             "title": "<h5>Welcome To Snappy Tack</h5><h2>Lorem ipsum dolor sit amet</h2>",
-            "banner_description": "Professionalize Your Online Store with High-Quality, No-Cost Images."
+            "banner_description": "Professionalize Your Online Store with High-Quality, No-Cost Images.",
+            "banner_url": "",
+            "banner_text": ""
           }
         },
         "index_banner_items_ciWGnL": {
@@ -33,7 +37,9 @@
           "settings": {
             "banner_image": "shopify://shop_images/Mask_group.png",
             "title": "<h5>Welcome To Snappy Tack</h5><h2>Lorem ipsum dolor sit amet</h2>",
-            "banner_description": "Professionalize Your Online Store with High-Quality, No-Cost Images."
+            "banner_description": "Professionalize Your Online Store with High-Quality, No-Cost Images.",
+            "banner_url": "",
+            "banner_text": ""
           }
         }
       },
