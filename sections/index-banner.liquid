@@ -31,11 +31,11 @@
       <div class="banner-item">
         <div class="banner-image">
           {%- if block.settings.banner_image != blank -%}
+            {% assign alt_text = block.settings.banner_image.alt | default: 'Banner Image' %}
             {{
               block.settings.banner_image
               | image_url: width: 2000
-              | image_tag: width: block.settings.banner_image.width, alt: block.settings.banner_image.alt
-              | default: 'Banner Image', fetchpriority: 'high'
+              | image_tag: width: block.settings.banner_image.width, alt: alt_text, fetchpriority: 'high'
             }}
           {%- endif -%}
         </div>
