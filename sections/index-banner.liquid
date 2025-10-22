@@ -1,0 +1,45 @@
+<div class="banner-box">
+    <div class="banner-item">
+        <div class="banner-image">
+            <img src="" alt="">
+        </div>
+        <div class="banner-content">
+            <div class="banner-content-left"></div>
+            <div class="banner-content-right"></div>
+        </div>
+    </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Index-banner",
+    "tag": "section",
+    "class": "index-banner-wrapper",
+    "settings": [
+    ],
+    "blocks": [
+      {
+        "name": "indexBannerItems",
+        "type": "indexBannerItems",
+        "settings": [
+           {
+             "type": "image_picker",
+             "id": "banner-image",
+             "label": "Banner Image"
+           },
+           {
+             "type": "richtext",
+             "id": "title",
+             "label": "Banner Title"
+           },
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Index-banner",
+      }
+    ]
+  }
+{% endschema %}
