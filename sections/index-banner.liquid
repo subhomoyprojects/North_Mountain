@@ -2,11 +2,12 @@
   {% if section.settings.display_type == 'single' %}
     {%- for block in section.blocks limit: 1 -%}
       <div class="banner-item">
-        <div class="banner-image" style="background-image: url({{ block.settings.banner-image | image_url }})"></div>
+        <div class="banner-image">
+        </div>
         <div class="banner-content">
           <div class="banner-content-left">
-            <h2>{{ block.settings.title }}</h2>
-            <p>{{ block.settings['banner-description'] }}</p>
+            <h2></h2>
+            <p></p>
           </div>
         </div>
       </div>
@@ -14,11 +15,11 @@
   {% else %}
     {%- for block in section.blocks -%}
       <div class="banner-item">
-        <div class="banner-image" style="background-image: url({{ block.settings.banner-image | image_url }})"></div>
+        <div class="banner-image"></div>
         <div class="banner-content">
           <div class="banner-content-left">
-            <h2>{{ block.settings.title }}</h2>
-            <p>{{ block.settings['banner-description'] }}</p>
+            <h2></h2>
+            <p></p>
           </div>
         </div>
       </div>
@@ -50,7 +51,7 @@
       "settings": [
         {
           "type": "image_picker",
-          "id": "banner-image",
+          "id": "banner_image",
           "label": "Banner Image"
         },
         {
@@ -60,7 +61,7 @@
         },
         {
           "type": "inline_richtext",
-          "id": "banner-description",
+          "id": "banner_description",
           "label": "Banner Description"
         }
       ]
