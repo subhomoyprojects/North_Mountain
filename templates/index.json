@@ -9,43 +9,24 @@
  */
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "index_banner_XQ647h": {
+      "type": "index-banner",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "index_banner_items_hd7NBz": {
+          "type": "indexBannerItems",
           "settings": {
-            "heading": "Browse our latest products",
-            "heading_size": "h0"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "banner_image": "shopify://shop_images/Mask_group.png",
+            "title": "<h5>Welcome To Snappy Tack</h5><h2>Lorem ipsum dolor sit amet</h2>",
+            "banner_description": "Professionalize Your Online Store with High-Quality, No-Cost Images."
           }
         }
       },
       "block_order": [
-        "heading",
-        "button"
+        "index_banner_items_hd7NBz"
       ],
+      "name": "Index-banner",
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "display_type": "single"
       }
     },
     "featured_collection": {
@@ -78,7 +59,7 @@
     }
   },
   "order": [
-    "image_banner",
+    "index_banner_XQ647h",
     "featured_collection"
   ]
 }
