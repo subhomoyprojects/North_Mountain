@@ -1,11 +1,4 @@
-
-<div class="common-header">
-    <h2><span>{{ subHeading }}</span>{{ title }}</h2>
-</div><div
-  class="
-        common-header {%- if alignment == 'center' -%} center {%- elsif alignment == 'right' -%} right {%- else -%} left {%- endif -%}
-  "
->
+<div class="common-header {%- if alignment == 'center' -%} center {%- elsif alignment == 'right' -%} right {%- else -%} left {%- endif -%}">
   <h2>
     <span>{{ subHeading }}</span>{{ title }}
   </h2>
