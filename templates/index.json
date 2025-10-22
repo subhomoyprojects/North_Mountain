@@ -59,7 +59,8 @@
       "settings": {
         "title": "Testing",
         "subHeading": "Sub heading",
-        "alignment": "center"
+        "alignment": "center",
+        "collection": ""
       }
     }
   },
