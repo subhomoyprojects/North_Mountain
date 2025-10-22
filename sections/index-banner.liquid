@@ -2,9 +2,7 @@
   {% if section.settings.display_type == 'single' %}
     {%- for block in section.blocks limit: 1 -%}
       <div class="banner-item">
-        <div class="banner-image">
-          
-        </div>
+        <div class="banner-image">{{ block.settings.banner_image }}</div>
         <div class="banner-content">
           <div class="banner-content-left">
             <h2></h2>
