@@ -1,6 +1,8 @@
-{%- render 'common-heading', title: section.settings.title, subHeading: section.settings.subHeading -%}
-
-
+{%- render 'common-heading',
+  title: section.settings.title,
+  subHeading: section.settings.subHeading,
+  alignment: section.settings.alignment
+-%}
 
 {% schema %}
 {
@@ -18,6 +20,26 @@
       "id": "subHeading",
       "label": "Sub Heading"
     },
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "Alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        }
+      ],
+      "default": "left"
+    }
   ],
   "presets": [
     {
