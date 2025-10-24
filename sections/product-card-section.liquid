@@ -37,7 +37,7 @@
     }
   }
 {%- endstyle -%}
-
+<div class="section-{{ section.id }}-padding">
 {%- render 'common-heading',
   title: section.settings.title,
   subHeading: section.settings.subHeading,
@@ -56,7 +56,7 @@
     quick_add: section.settings.quick_add
   %}
 {%- endfor -%}
-
+</div>
 {% schema %}
 {
   "name": "Product Card Section",
