@@ -55,7 +55,8 @@
   -%}
 
   {%- for block in section.blocks limit: 4 -%}      
-  {% render 'card-product',
+    {% assign product = block.settings.product %}
+    {% render 'card-product',
         card_product: product,
         media_aspect_ratio: section.settings.image_ratio,
         image_shape: section.settings.image_shape,
