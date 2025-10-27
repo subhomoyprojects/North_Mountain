@@ -50,8 +50,8 @@
       {%- for block in section.blocks limit: 4 -%}
         <div class="grid__item">
           {% assign product = block.settings.product %}
-          {% render 'card-product',
-            card_product: product
+          {% render 'custom-product-card',
+            product: product
           %}
         </div>
       {%- endfor -%}
