@@ -25,13 +25,6 @@
   <script src="{{ 'price-per-item.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
 
-{% comment %} Products {% endcomment %}
-{{ 'section-main-product.css' | asset_url | stylesheet_tag }}
-{{ 'section-featured-product.css' | asset_url | stylesheet_tag }}
-{{ 'component-price.css' | asset_url | stylesheet_tag }}
-{{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
-{{ 'component-volume-pricing.css' | asset_url | stylesheet_tag }}
-
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -48,15 +41,15 @@
 
 <div class="section-{{ section.id }}-padding">
   <div class="page-width">
-  {%- render 'common-heading',
-    title: section.settings.title,
-    subHeading: section.settings.subHeading,
-    alignment: section.settings.alignment
-  -%}
+    {%- render 'common-heading',
+      title: section.settings.title,
+      subHeading: section.settings.subHeading,
+      alignment: section.settings.alignment
+    -%}
 
-  {%- for block in section.blocks limit: 4 -%}      
-    {% assign product = block.settings.product %}
-    {% render 'card-product',
+    {%- for block in section.blocks limit: 4 -%}
+      {% assign product = block.settings.product %}
+      {% render 'card-product',
         card_product: product,
         media_aspect_ratio: section.settings.image_ratio,
         image_shape: section.settings.image_shape,
@@ -67,17 +60,6 @@
         quick_add: section.settings.quick_add
       %}
     {%- endfor -%}
-  {% comment %}
-    {
-      "type": "collection",
-      "id": "collection",
-      "label": "Collection"
-    },
-  {% endcomment %}
-      
-  {%- for block in section.blocks limit: 4 -%}
-    
-  {%- endfor -%}
   </div>
 </div>
 {% schema %}
@@ -136,7 +118,7 @@
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
     },
-     {
+    {
       "type": "select",
       "id": "image_ratio",
       "options": [
