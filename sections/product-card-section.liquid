@@ -50,7 +50,7 @@
       {%- for block in section.blocks limit: 4 -%}
         <div class="grid__item">
           {% assign product = block.settings.product %}
-          {% render 'card-product',
+          {% comment %} {% render 'card-product',
             card_product: product,
             media_aspect_ratio: section.settings.image_ratio,
             image_shape: section.settings.image_shape,
@@ -59,7 +59,23 @@
             show_rating: section.settings.show_rating,
             section_id: section.id,
             quick_add: section.settings.quick_add
-          %}
+          %} {% endcomment %}
+            <div class="image-area">
+              <div class="image-area__image">
+                {% if product.featured_image %}
+                  {% assign image = product.featured_image %}
+                {% else %}
+                  {% assign image = product.images.first %}
+                {% endif %}
+                {% if image %}
+                  {% render 'image',
+                    image: image,
+                    aspect_ratio: section.settings.image_ratio,
+                    shape: section.settings.image_shape,
+                    alt: product.title
+                  %}
+                {% endif %}
+            </div>
         </div>
       {%- endfor -%}
     </div>
