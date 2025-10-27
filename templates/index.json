@@ -55,12 +55,52 @@
     },
     "product_card_section_FYzxxx": {
       "type": "product-card-section",
+      "blocks": {
+        "product_PzQh83": {
+          "type": "product",
+          "settings": {
+            "product": "magnetic-wood-frame"
+          }
+        },
+        "product_jx6GPE": {
+          "type": "product",
+          "settings": {
+            "product": "textile-poster"
+          }
+        },
+        "product_TWHTwL": {
+          "type": "product",
+          "settings": {
+            "product": "acrylic-block"
+          }
+        },
+        "product_knDTak": {
+          "type": "product",
+          "settings": {
+            "product": "floating-frame"
+          }
+        },
+        "product_DQzaN3": {
+          "type": "product",
+          "settings": {
+            "product": "dibond-print"
+          }
+        }
+      },
+      "block_order": [
+        "product_PzQh83",
+        "product_jx6GPE",
+        "product_TWHTwL",
+        "product_knDTak",
+        "product_DQzaN3"
+      ],
       "name": "Product Card Section",
       "settings": {
         "title": "Testing",
         "subHeading": "Sub heading",
         "alignment": "center",
-        "collection": ""
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
