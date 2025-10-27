@@ -1,3 +1,4 @@
+{% comment %} Collection Items {% endcomment %}
 {{ 'component-card.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 
@@ -37,6 +38,7 @@
     }
   }
 {%- endstyle -%}
+
 <div class="section-{{ section.id }}-padding">
   {%- render 'common-heading',
     title: section.settings.title,
@@ -65,6 +67,18 @@
       "label": "Collection"
     },
   {% endcomment %}
+  {%- for block in block.settings limit: 4 -%}
+    {% render 'card-product',
+      card_product: product,
+      media_aspect_ratio: section.settings.image_ratio,
+      image_shape: section.settings.image_shape,
+      show_secondary_image: section.settings.show_secondary_image,
+      show_vendor: section.settings.show_vendor,
+      show_rating: section.settings.show_rating,
+      section_id: section.id,
+      quick_add: section.settings.quick_add
+    %}
+  {%- endfor -%}
 </div>
 {% schema %}
 {
@@ -121,6 +135,19 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "name": "product",
+      "type": "product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product Items"
+        }
+      ]
     }
   ],
   "presets": [
