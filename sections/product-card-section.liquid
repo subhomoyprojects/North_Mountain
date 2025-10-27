@@ -46,20 +46,23 @@
       subHeading: section.settings.subHeading,
       alignment: section.settings.alignment
     -%}
-
-    {%- for block in section.blocks limit: 4 -%}
-      {% assign product = block.settings.product %}
-      {% render 'card-product',
-        card_product: product,
-        media_aspect_ratio: section.settings.image_ratio,
-        image_shape: section.settings.image_shape,
-        show_secondary_image: section.settings.show_secondary_image,
-        show_vendor: section.settings.show_vendor,
-        show_rating: section.settings.show_rating,
-        section_id: section.id,
-        quick_add: section.settings.quick_add
-      %}
-    {%- endfor -%}
+    <div class="grid">
+      {%- for block in section.blocks limit: 4 -%}
+        <div class="grid__item">
+          {% assign product = block.settings.product %}
+          {% render 'card-product',
+            card_product: product,
+            media_aspect_ratio: section.settings.image_ratio,
+            image_shape: section.settings.image_shape,
+            show_secondary_image: section.settings.show_secondary_image,
+            show_vendor: section.settings.show_vendor,
+            show_rating: section.settings.show_rating,
+            section_id: section.id,
+            quick_add: section.settings.quick_add
+          %}
+        </div>
+      {%- endfor -%}
+    </div>
   </div>
 </div>
 {% schema %}
