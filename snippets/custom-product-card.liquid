@@ -1,2 +1,8 @@
-<div class="product-image">{{ product.featured_image | image_url: width: 200 | image_tag }}</div>
-<div>{{ product.title }}</div>
+<div class="custom-product-card">
+  <div class="product-image-area">
+    {{ product.featured_image | image_url: width: 200 | image_tag }}
+  </div>
+  <div class="product-info">
+    <h4 class="product-title">{{ product.title }}</h4>
+  </div>
+</div>
